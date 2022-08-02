@@ -1,0 +1,45 @@
+.homePage {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.homeBanner {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeBtnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.homeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 50px;
+  background: $blue;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition-duration: 250ms;
+  font-weight: 600;
+  font-size: 1em;
+  &:hover {
+    background: $lightblue;
+  }
+}

@@ -1,5 +1,5 @@
 import { Provider } from "react-redux";
-import store from "../redux/store";
+import { store } from "../redux";
 import axios from "axios";
 import "../styles/global.scss";
 import { Layout } from "../components";

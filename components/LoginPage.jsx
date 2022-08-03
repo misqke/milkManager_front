@@ -3,7 +3,7 @@ import styles from "../styles/LoginPage.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { login } from "../actions";
-import { setUser } from "../redux/userSlice";
+import { setUser, setMilks } from "../redux";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -24,6 +24,7 @@ const LoginPage = () => {
       setLoading(false);
       return;
     }
+    dispatch(setMilks({ milks: data.milks }));
     dispatch(setUser({ username, password, name: data.storeInfo }));
   };
 

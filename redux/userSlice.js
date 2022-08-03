@@ -13,8 +13,13 @@ const userSlice = createSlice({
       state.username = payload.username;
       state.password = payload.password;
     },
+    clearUser: (state) => {
+      state.name = "";
+      state.username = "";
+      state.password = "";
+    },
   },
 });
 
-export const { setUser } = userSlice.actions;
+export const { setUser, clearUser } = userSlice.actions;
 export default userSlice.reducer;

@@ -2,7 +2,11 @@ import React from "react";
 import { InventoryPage } from "../components";
 
 const Inventory = () => {
-  return <InventoryPage />;
+  return (
+    <>
+      <InventoryPage />
+    </>
+  );
 };
 
 export default Inventory;

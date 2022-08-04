@@ -1,0 +1,14 @@
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: $black;
+  border: 2px solid $lightblue;
+  color: $lightblue;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}

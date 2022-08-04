@@ -14,7 +14,11 @@ const Home = () => {
     }
   }, []);
 
-  return <HomePage />;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 };
 
 export default Home;

@@ -7,6 +7,7 @@ import {
   updateInvStacks,
   updateOrderCrates,
   updateOrderStacks,
+  updateOrderSingles,
 } from "./milkSlice";
 
 export {
@@ -19,4 +20,5 @@ export {
   updateInvStacks,
   updateOrderCrates,
   updateOrderStacks,
+  updateOrderSingles,
 };

@@ -32,8 +32,8 @@ const InventoryPage = () => {
         <Review
           inventory={true}
           milks={milks}
-          text={`INVENTORY for ${user.name}`}
           toggle={closeReview}
+          user={user}
         />
       )}
       <Nav>
@@ -48,7 +48,7 @@ const InventoryPage = () => {
           <p>total</p>
         </div>
         {milks.map((milk, index) => (
-          <InventoryRow milk={milk} index={index} />
+          <InventoryRow key={milk.id} milk={milk} index={index} />
         ))}
       </div>
       <button type="button" className={styles.btn} onClick={() => openReview()}>

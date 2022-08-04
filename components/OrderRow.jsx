@@ -22,7 +22,7 @@ const OrderRow = ({ milk, index }) => {
           {milk.name}
         </p>
         <div className={styles.orderInfoBox}>
-          <p>Previous order: {milk.previous}</p>
+          <p>Previous Order: {milk.previous}</p>
           <p>Avg Weekly Sold: {milk.weeklyAvg}</p>
         </div>
         <div className={styles.orderRow}>

@@ -34,6 +34,7 @@ const OrderPage = () => {
           milks={milks}
           text={`ORDER for ${user.name}`}
           toggle={closeReview}
+          user={user}
         />
       )}
       <Nav>
@@ -48,7 +49,7 @@ const OrderPage = () => {
           <p>total</p>
         </div>
         {milks.map((milk, index) => (
-          <OrderRow milk={milk} index={index} />
+          <OrderRow key={milk.id} milk={milk} index={index} />
         ))}
       </div>
       <button type="button" className={styles.btn} onClick={() => openReview()}>

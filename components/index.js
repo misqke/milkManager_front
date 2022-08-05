@@ -4,6 +4,8 @@ import Layout from "./Layout";
 import InventoryPage from "./InventoryPage";
 import OrderPage from "./OrderPage";
 import ConfirmationPage from "./ConfirmationPage";
+import Loading from "./Loading";
+
 export {
   Layout,
   HomePage,
@@ -11,4 +13,5 @@ export {
   InventoryPage,
   OrderPage,
   ConfirmationPage,
+  Loading,
 };

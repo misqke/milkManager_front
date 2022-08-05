@@ -29,10 +29,11 @@
   max-width: 500px;
   height: 80%;
   gap: 5px;
+  overflow-y: scroll;
 }
 
 .reviewInfo {
-  width: 50%;
+  width: 45%;
   font-size: 0.75em;
   height: auto;
 }
@@ -41,4 +42,13 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+}
+
+.reviewLoadingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
 }

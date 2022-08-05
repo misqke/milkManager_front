@@ -1,17 +1,18 @@
-import React from "react";
 import styles from "../styles/HomePage.module.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { clearUser } from "../redux";
 import { useRouter } from "next/router";
 
-const HomePage = () => {
-  const user = useSelector((state) => state.user.name);
+const HomePage = ({ user }) => {
+  const confirmation = useSelector((state) => state.confirmation);
   const router = useRouter();
+  const dispatch = useDispatch();
 
   return (
     <div className={styles.homePage}>
       <div className={styles.homeBanner}>
         <h1>Milk Manager</h1>
-        <h4>{user}</h4>
+        <h4>{user.name}</h4>
       </div>
       <div className={styles.homeBtnContainer}>
         <button
@@ -28,9 +29,22 @@ const HomePage = () => {
         >
           Order
         </button>
+        {confirmation.image.length > 0 && (
+          <button
+            type="button"
+            className={styles.homeBtn}
+            onClick={() => router.push("/confirmation")}
+          >
+            Confirmation
+          </button>
+        )}
       </div>
       <div className={styles.homeBtnContainer}>
-        <button type="button" className={styles.homeBtn}>
+        <button
+          type="button"
+          className={styles.homeBtn}
+          onClick={() => dispatch(clearUser())}
+        >
           Log Out
         </button>
       </div>

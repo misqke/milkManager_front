@@ -16,6 +16,5 @@ export const submitOrder = async (milks, username, password, demo) => {
 
 export const getConfirmation = async () => {
   const { data } = await axios.get("/api/submits/confirmation");
-  console.log(data);
   return data;
 };

@@ -24,6 +24,7 @@ const OrderRow = ({ milk, index }) => {
         <div className={styles.orderInfoBox}>
           <p>Previous Order: {milk.previous}</p>
           <p>Avg Weekly Sold: {milk.weeklyAvg}</p>
+          <p>Suggested Order: {milk.suggestedOrder}</p>
         </div>
         <div className={styles.orderRow}>
           <div className={styles.orderRowBox}>

@@ -9,6 +9,7 @@ import {
   updateOrderStacks,
   updateOrderSingles,
 } from "./milkSlice";
+import { setConfirmation, clearConfirmation } from "./confirmationSlice";
 
 export {
   store,
@@ -21,4 +22,6 @@ export {
   updateOrderCrates,
   updateOrderStacks,
   updateOrderSingles,
+  setConfirmation,
+  clearConfirmation,
 };

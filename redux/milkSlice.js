@@ -16,7 +16,7 @@ const milkSlice = createSlice({
         Number(payload.value) * 6 * Number(milk.multiplier) +
         Number(milk.inventory.crates) * Number(milk.multiplier) +
         Number(milk.inventory.singles);
-      state.milks[payload.index].inventory.total = newTotal;
+      state.milks[payload.index].inventory.total = Math.floor(newTotal);
     },
     updateInvCrates: (state, { payload }) => {
       state.milks[payload.index].inventory.crates = payload.value;
@@ -25,16 +25,16 @@ const milkSlice = createSlice({
         Number(milk.inventory.stacks) * 6 * Number(milk.multiplier) +
         Number(payload.value) * Number(milk.multiplier) +
         Number(milk.inventory.singles);
-      state.milks[payload.index].inventory.total = newTotal;
+      state.milks[payload.index].inventory.total = Math.floor(newTotal);
     },
     updateInvSingles: (state, { payload }) => {
-      state.milks[payload.index].inventory.singles = payload.value;
+      state.milks[payload.index].inventory.singles = Math.floor(payload.value);
       const milk = state.milks[payload.index];
       const newTotal =
         Number(milk.inventory.stacks) * 6 * Number(milk.multiplier) +
         Number(milk.inventory.crates) * Number(milk.multiplier) +
-        Number(payload.value);
-      state.milks[payload.index].inventory.total = newTotal;
+        Math.floor(Number(payload.value));
+      state.milks[payload.index].inventory.total = Math.floor(newTotal);
     },
     updateOrderStacks: (state, { payload }) => {
       state.milks[payload.index].order.stacks = payload.value;
@@ -43,7 +43,7 @@ const milkSlice = createSlice({
         Number(payload.value) * 6 * Number(milk.multiplier) +
         Number(milk.order.crates) * Number(milk.multiplier) +
         Number(milk.order.singles);
-      state.milks[payload.index].order.total = newTotal;
+      state.milks[payload.index].order.total = Math.floor(newTotal);
     },
     updateOrderCrates: (state, { payload }) => {
       state.milks[payload.index].order.crates = payload.value;
@@ -52,16 +52,16 @@ const milkSlice = createSlice({
         Number(milk.order.stacks) * 6 * Number(milk.multiplier) +
         Number(payload.value) * Number(milk.multiplier) +
         Number(milk.order.singles);
-      state.milks[payload.index].order.total = newTotal;
+      state.milks[payload.index].order.total = Math.floor(newTotal);
     },
     updateOrderSingles: (state, { payload }) => {
-      state.milks[payload.index].order.singles = payload.value;
+      state.milks[payload.index].order.singles = Math.floor(payload.value);
       const milk = state.milks[payload.index];
       const newTotal =
         Number(milk.order.stacks) * 6 * Number(milk.multiplier) +
         Number(milk.order.crates) * Number(milk.multiplier) +
-        Number(payload.value);
-      state.milks[payload.index].order.total = newTotal;
+        Math.floor(Number(payload.value));
+      state.milks[payload.index].order.total = Math.floor(newTotal);
     },
   },
 });

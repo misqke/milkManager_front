@@ -17,6 +17,9 @@ const InventoryRow = ({ milk, index }) => {
         <p className={styles.orderName} style={{ color: milk.color }}>
           {milk.name}
         </p>
+        <div className={styles.orderInfoBox}>
+          <p>Estimated On Hand: {milk.onHand}</p>
+        </div>
         <div className={styles.orderRow}>
           <div className={styles.orderRowBox}>
             <input

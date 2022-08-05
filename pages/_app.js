@@ -4,7 +4,8 @@ import axios from "axios";
 import "../styles/global.scss";
 import { Layout } from "../components";
 
-axios.defaults.baseURL = "http://localhost:8000/";
+// axios.defaults.baseURL = "http://localhost:8000/";
+axios.defaults.baseURL = "https://milk-manager.herokuapp.com/";
 
 function MyApp({ Component, pageProps }) {
   return (

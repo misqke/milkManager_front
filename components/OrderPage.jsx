@@ -24,7 +24,7 @@ const OrderPage = () => {
     if (milks.length === 0) {
       router.push("/login");
     }
-  }, [milks]);
+  }, [milks, router]);
 
   return (
     <div className={styles.orderPage}>

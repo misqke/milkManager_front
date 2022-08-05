@@ -17,7 +17,7 @@ const ConfirmationPage = () => {
     if (!confirmation.image.length) {
       router.push("/");
     }
-  }, []);
+  }, [user, router, confirmation]);
 
   return (
     <div className={styles.confirmationPage}>
@@ -30,6 +30,7 @@ const ConfirmationPage = () => {
           src={`data:image/png;base64,${confirmation.image}`}
           width={360}
           height={600}
+          alt=""
         />
       </div>
     </div>

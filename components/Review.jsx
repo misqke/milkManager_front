@@ -21,13 +21,13 @@ const Review = ({ milks, inventory, toggle, user }) => {
       })
     );
     const APICall = inventory ? submitInventory : submitOrder;
-    const data = await APICall(milks, user.username, user.password, true);
+    const data = await APICall(milks, user.username, user.password, false);
     if (data.error) {
       setLoading(false);
       return;
     }
     const checkID = setInterval(async () => {
-      const data = await getConfirmation();
+      const data = await getConfirmation(user.username);
       dispatch(setConfirmation(data));
       if (data.image.length > 0) {
         clearInterval(checkID);

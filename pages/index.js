@@ -13,7 +13,7 @@ const Home = () => {
       router.push("/login");
     }
     setLoading(false);
-  }, [user]);
+  }, [user, router]);
 
   return <>{loading ? <Loading /> : <HomePage user={user} />}</>;
 };

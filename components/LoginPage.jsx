@@ -32,7 +32,7 @@ const LoginPage = () => {
     if (user.name.length > 0) {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   return (
     <div className={styles.loginPage}>
@@ -57,7 +57,7 @@ const LoginPage = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="username">Dean's Username</label>
+          <label htmlFor="username">Dean&apos;s Username</label>
         </div>
         <div className={styles.loginFormControl}>
           <input
@@ -67,7 +67,7 @@ const LoginPage = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <label htmlFor="password">Dean's Password</label>
+          <label htmlFor="password">Dean&apos;s Password</label>
         </div>
         <button disabled={loading} className={styles.loginBtn} type="submit">
           Log In

@@ -5,6 +5,7 @@ const login = async (credentials) => {
     const { data } = await axios.post("api/milks", credentials);
     return data;
   } catch (error) {
+    console.log(error);
     return error.response.data;
   }
 };

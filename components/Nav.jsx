@@ -9,7 +9,7 @@ const Nav = ({ children }) => {
       <div className={styles.iconBox}>
         <Link href={"/"} passHref>
           <a>
-            <Image src={"/backArrow.png"} width={80} height={80} />
+            <Image src={"/backArrow.png"} width={80} height={80} alt="back" />
           </a>
         </Link>
       </div>

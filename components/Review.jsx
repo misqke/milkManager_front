@@ -33,7 +33,7 @@ const Review = ({ milks, inventory, toggle, user }) => {
         clearInterval(checkID);
         router.push("/confirmation");
       }
-    }, 5000);
+    }, 12500);
   };
 
   return (

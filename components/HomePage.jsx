@@ -1,12 +1,17 @@
 import styles from "../styles/HomePage.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { clearUser } from "../redux";
+import { clearUser, clearConfirmation } from "../redux";
 import { useRouter } from "next/router";
 
 const HomePage = ({ user }) => {
   const confirmation = useSelector((state) => state.confirmation);
   const router = useRouter();
   const dispatch = useDispatch();
+
+  const logout = () => {
+    dispatch(clearConfirmation);
+    dispatch(clearUser);
+  };
 
   return (
     <div className={styles.homePage}>
@@ -43,7 +48,7 @@ const HomePage = ({ user }) => {
         <button
           type="button"
           className={styles.homeBtn}
-          onClick={() => dispatch(clearUser())}
+          onClick={() => logout()}
         >
           Log Out
         </button>
